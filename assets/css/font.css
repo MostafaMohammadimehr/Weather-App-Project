@@ -1,19 +1,19 @@
 @font-face {
     font-family: aviny;
-    src: url("aviny_ygxd.ttf");
+    src: url("/assets/support/fonts/aviny.ttf");
 }
 
 @font-face {
     font-family: sans;
-    src: url("Iranian\ Sans.ttf");
+    src: url("/assets/support/fonts/sans.ttf");
 }
 
 @font-face {
     font-family: koodak;
-    src: url("B\ Koodak\ Bold_0.ttf");
+    src: url("/assets/support/fonts/koodak.ttf");
 }
 
 @font-face {
     font-family: vijaya;
-    src: url("Vijaya\ Bold.ttf");
+    src: url("/assets/support/fonts/vijaya.ttf");
 }
