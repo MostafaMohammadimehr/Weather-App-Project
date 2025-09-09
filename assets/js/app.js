@@ -6,10 +6,8 @@ let tempOutput = document.getElementById("temp");
 let windOutput = document.getElementById("wind");
 const persianRegex = /[\u0600-\u06FF]/;
 const apiKey = "3045dd712ffe6e702e3245525ac7fa38";
-
 cityInput.classList.remove("vijaya");
 cityInput.setAttribute("dir", "rtl");
-
 addInput.addEventListener("click", async () => {
   let weatherResult = await (
     await fetch(
@@ -18,9 +16,6 @@ addInput.addEventListener("click", async () => {
   ).json();
   setInfo(weatherResult);
 });
-//خلاقیت
-//  خودم از اینجا
-
 cityInput.addEventListener("keydown", async (e) => {
   if (e.key === "Enter") {
     let weatherResult = await (
@@ -43,17 +38,14 @@ cityInput.addEventListener("input", () => {
     cityInput.setAttribute("dir", "ltr");
   }
 });
-
-//تا اینجا
-
 const setInfo = (data) => {
   let cityName = data["name"];
+  let countryName = data["sys"]["country"];
   let description = data["weather"][0]["description"];
   let temp = data["main"]["temp"];
   let wind = data["wind"]["speed"];
-
-  cityOutput.innerHTML = `City : ${cityName}`;
-  descOutput.innerHTML = `Description : ${description}`;
-  tempOutput.innerHTML = `Temperature : ${temp} °C`;
-  windOutput.innerHTML = `Wind Speed : ${wind} km/h`;
+  cityOutput.innerHTML = `نام شهر : ${cityName}`;
+  descOutput.innerHTML = `نوع آب و هوا : ${description}`;
+  tempOutput.innerHTML = `دمای هوا (سلسیوس) : ${temp}`;
+  windOutput.innerHTML = ` سرعت وزش باد (کیلومتر بر ساعت) : ${wind}`;
 };

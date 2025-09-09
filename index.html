@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,41 +11,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/font.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="ivon" href="./assets/support/images.png">
+    <link rel="icon" href="./assets/support/img/images.png">
     <title>Weather App Project</title>
 </head>
-
 <body>
     <div class="container-fluid">
         <div class="row offset-sm-1">
-            <!-- Header part -->
             <section class="header col-md-4 col-sm-10 ">
                 <h1> دریافت اطلاعات هواشناسی </h1>
                 <h3>Javascript Weather App</h3>
             </section>
-
             <section class="main col-md-7 col-sm-10  ">
-                <!-- input section -->
                 <section class="inputs">
                     <input type="submit" value="ثبت" id="add">
                     <input type="text" placeholder="نام شهر را وارد کنید ..." id="cityInput">
-
                 </section>
-
-                <!-- Display section -->
                 <section class="display">
                     <div class="wrapper">
-                        <h2 id="cityoutput"></h2>
-                        <p id="description"></p>
-                        <p id="temp"></p>
-                        <p id="wind"></p>
+                        <h2 class="show-weater" id="cityoutput"></h2>
+                        <p class="show-weater" id="description"></p>
+                        <p class="show-weater" id="temp"></p>
+                        <p class="show-weater" id="wind"></p>
                     </div>
                 </section>
-
             </section>
         </div>
     </div>
     <script src="./assets/js/app.js"></script>
 </body>
-
 </html>
