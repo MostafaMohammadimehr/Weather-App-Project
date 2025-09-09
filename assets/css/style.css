@@ -43,7 +43,7 @@ body {
 
 .header {
     text-align: center;
-    animation: flot 3s ease-in-out infinite;
+    animation: flot 3s ease-in-out forwards, backgrod 4s linear infinite;
     border-radius: 4rem;
     box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.1);
     height: 200px;
@@ -51,19 +51,31 @@ body {
 
 }
 
-@keyframes flot {
+@keyframes flote {
 
     0%,
     100% {
-        transform: translateX(10px);
-        background: rgba(255, 255, 255, 0.07);
-        border-radius: 2rem;
+        transform: translateX(3px);
     }
 
     50% {
-        transform: translateX(-10px);
-        background: rgba(255, 255, 255, 0);
+        transform: translateX(-3px);
+    }
+}
+
+@keyframes backgrod {
+
+    0%,
+    100% {
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 2rem;
+        box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.25);
+    }
+
+    50% {
+        background: rgba(255, 255, 255, 0.2);
         border-radius: 3rem;
+        box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.2);
     }
 }
 
@@ -96,19 +108,30 @@ body {
     color: #f39c12;
     text-shadow: 0 0 10px #f39c12;
     font-family: vijaya;
-    animation: hri 3s ease-in-out infinite;
+    animation: hri 3s ease-in-out forwards;
 }
 
 @keyframes hri {
 
-    0%,
     100% {
-        transform: rotate(-10deg);
+        transform: rotate(0deg);
+
     }
 
-    50% {
-        transform: rotate(+10deg);
+    75% {
+        transform: rotate(20deg);
     }
+
+    25% {
+        transform: rotate(-20deg);
+
+    }
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+
 }
 
 .inputs {
